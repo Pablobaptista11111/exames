@@ -48,6 +48,261 @@
             flex: 1;
         }
 
+        /* Dark Mode Styles */
+        body.dark-mode {
+            background-color: #0f172a;
+            color: #e2e8f0;
+        }
+
+        body.dark-mode .app-container {
+            background-color: #0f172a;
+        }
+
+        body.dark-mode .stat-card,
+        body.dark-mode .table-container,
+        body.dark-mode .selection-controls {
+            background: #1e293b;
+            border-color: #334155;
+        }
+
+        body.dark-mode .stat-card:hover {
+            border-color: #475569;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+        }
+
+        body.dark-mode .stat-header {
+            color: #94a3b8;
+        }
+
+        body.dark-mode .stat-value {
+            color: #f1f5f9;
+        }
+
+        body.dark-mode .data-table th {
+            background: #1e293b;
+            color: #cbd5e1;
+            border-bottom-color: #334155;
+        }
+
+        body.dark-mode .data-table td {
+            border-bottom-color: #334155;
+            color: #cbd5e1;
+        }
+
+        body.dark-mode .data-table tbody tr:hover {
+            background: #334155;
+        }
+
+        body.dark-mode .table-search,
+        body.dark-mode .table-btn {
+            background: #1e293b;
+            border-color: #334155;
+            color: #cbd5e1;
+        }
+
+        body.dark-mode .table-search::placeholder {
+            color: #64748b;
+        }
+
+        body.dark-mode .table-btn:hover {
+            background: #334155;
+            border-color: #475569;
+            color: #e2e8f0;
+        }
+
+        body.dark-mode .filter-tab:hover {
+            background: #334155;
+            color: #e2e8f0;
+        }
+
+        body.dark-mode .filter-tab.active {
+            background: #334155;
+            color: #f1f5f9;
+        }
+
+        body.dark-mode .action-btn {
+            background: #1e293b;
+            color: #94a3b8;
+        }
+
+        body.dark-mode .action-btn:hover {
+            background: #334155;
+            color: #cbd5e1;
+        }
+
+        body.dark-mode .btn-clear {
+            background: #1e293b;
+            border-color: #334155;
+            color: #94a3b8;
+        }
+
+        body.dark-mode .btn-clear:hover {
+            background: #334155;
+            border-color: #475569;
+            color: #cbd5e1;
+        }
+
+        body.dark-mode .exam-code {
+            color: #f1f5f9;
+        }
+
+        body.dark-mode .add-filter-btn {
+            border-color: #475569;
+            color: #94a3b8;
+        }
+
+        body.dark-mode .add-filter-btn:hover {
+            border-color: #64748b;
+            color: #cbd5e1;
+        }
+
+        /* Dark Mode Toggle */
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: white;
+            border: 2px solid #e2e8f0;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        body.dark-mode .theme-toggle {
+            background: #1e293b;
+            border-color: #334155;
+        }
+
+        .theme-toggle:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .theme-toggle .icon {
+            width: 24px;
+            height: 24px;
+            color: #64748b;
+        }
+
+        body.dark-mode .theme-toggle .icon {
+            color: #fbbf24;
+        }
+
+        /* Advanced Filters */
+        .advanced-filters {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            display: none;
+        }
+
+        body.dark-mode .advanced-filters {
+            background: #1e293b;
+            border-color: #334155;
+        }
+
+        .advanced-filters.active {
+            display: block;
+        }
+
+        .filter-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+
+        .filter-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .filter-label {
+            font-size: 13px;
+            font-weight: 500;
+            color: #64748b;
+        }
+
+        body.dark-mode .filter-label {
+            color: #94a3b8;
+        }
+
+        .filter-select,
+        .filter-input {
+            height: 36px;
+            padding: 0 12px;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            background: white;
+            font-size: 14px;
+            color: #334155;
+        }
+
+        body.dark-mode .filter-select,
+        body.dark-mode .filter-input {
+            background: #0f172a;
+            border-color: #334155;
+            color: #cbd5e1;
+        }
+
+        .filter-actions {
+            display: flex;
+            gap: 8px;
+            justify-content: flex-end;
+        }
+
+        .btn-filter {
+            height: 36px;
+            padding: 0 16px;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            background: white;
+            color: #64748b;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.15s ease;
+        }
+
+        body.dark-mode .btn-filter {
+            background: #1e293b;
+            border-color: #334155;
+            color: #94a3b8;
+        }
+
+        .btn-filter:hover {
+            background: #f8fafc;
+            border-color: #cbd5e1;
+            color: #374151;
+        }
+
+        body.dark-mode .btn-filter:hover {
+            background: #334155;
+            border-color: #475569;
+            color: #e2e8f0;
+        }
+
+        .btn-filter.primary {
+            background: #7c3aed;
+            border-color: #7c3aed;
+            color: white;
+        }
+
+        .btn-filter.primary:hover {
+            background: #6d28d9;
+            border-color: #6d28d9;
+        }
+
         /* Stats Cards */
         .stats-grid {
             display: grid;
@@ -551,6 +806,24 @@
     </style>
 </head>
 <body>
+    <!-- Dark Mode Toggle -->
+    <button class="theme-toggle" onclick="toggleTheme()" title="Alternar tema">
+        <svg class="icon icon-sun" viewBox="0 0 24 24" style="display: none;">
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="1" x2="12" y2="3"/>
+            <line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/>
+            <line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg class="icon icon-moon" viewBox="0 0 24 24">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+    </button>
+
     <div class="app-container">
         <!-- Main Content -->
         <main class="main-content">
@@ -706,13 +979,69 @@
                         <button class="filter-tab active" data-filter="todos">Todos</button>
                         <button class="filter-tab" data-filter="disponíveis">Disponíveis</button>
                         <button class="filter-tab" data-filter="especializados">Especializados</button>
-                        <button class="add-filter-btn">
+                        <button class="add-filter-btn" onclick="toggleAdvancedFilters()">
                             <svg class="icon" viewBox="0 0 24 24">
                                 <line x1="12" y1="5" x2="12" y2="19"/>
                                 <line x1="5" y1="12" x2="19" y2="12"/>
                             </svg>
-                            Add
+                            Filtros Avançados
                         </button>
+                    </div>
+
+                    <!-- Advanced Filters Panel -->
+                    <div class="advanced-filters" id="advancedFilters">
+                        <div class="filter-row">
+                            <div class="filter-group">
+                                <label class="filter-label">Categoria</label>
+                                <select class="filter-select" id="categoryFilter">
+                                    <option value="">Todas as categorias</option>
+                                    <option value="Bioquímica">Bioquímica</option>
+                                    <option value="Hematologia">Hematologia</option>
+                                    <option value="Hormonal">Hormonal</option>
+                                    <option value="Imunologia">Imunologia</option>
+                                    <option value="Microbiologia">Microbiologia</option>
+                                    <option value="Genética">Genética</option>
+                                    <option value="Toxicologia">Toxicologia</option>
+                                    <option value="Biologia Molecular">Biologia Molecular</option>
+                                    <option value="Urinálise">Urinálise</option>
+                                </select>
+                            </div>
+                            <div class="filter-group">
+                                <label class="filter-label">Faixa de Preço</label>
+                                <select class="filter-select" id="priceFilter">
+                                    <option value="">Todos os preços</option>
+                                    <option value="0-50">Até R$ 50,00</option>
+                                    <option value="50-100">R$ 50,00 - R$ 100,00</option>
+                                    <option value="100-200">R$ 100,00 - R$ 200,00</option>
+                                    <option value="200-500">R$ 200,00 - R$ 500,00</option>
+                                    <option value="500-999999">Acima de R$ 500,00</option>
+                                </select>
+                            </div>
+                            <div class="filter-group">
+                                <label class="filter-label">Unidade</label>
+                                <select class="filter-select" id="unitFilter">
+                                    <option value="">Todas as unidades</option>
+                                    <option value="Todas">Todas</option>
+                                    <option value="Centro">Centro</option>
+                                    <option value="Recife">Recife</option>
+                                    <option value="Boa Viagem">Boa Viagem</option>
+                                </select>
+                            </div>
+                            <div class="filter-group">
+                                <label class="filter-label">Disponibilidade</label>
+                                <select class="filter-select" id="availabilityFilter">
+                                    <option value="">Todas</option>
+                                    <option value="Todas unidades">Todas unidades</option>
+                                    <option value="Especializada">Especializada</option>
+                                    <option value="Ocupacional">Ocupacional</option>
+                                    <option value="Confidencial">Confidencial</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="filter-actions">
+                            <button class="btn-filter" onclick="clearAdvancedFilters()">Limpar Filtros</button>
+                            <button class="btn-filter primary" onclick="applyAdvancedFilters()">Aplicar Filtros</button>
+                        </div>
                     </div>
 
                     <div class="table-controls">
@@ -863,6 +1192,12 @@
         let filteredExams = [...examData];
         let currentFilter = 'todos';
         let selectedExams = new Set(); // Para armazenar os códigos dos exames selecionados
+        let advancedFiltersState = {
+            category: '',
+            priceRange: '',
+            unit: '',
+            availability: ''
+        };
 
         function getCategoryClass(category) {
             const categoryMap = {
@@ -953,37 +1288,12 @@
         }
 
         function searchExams(searchTerm) {
-            const term = searchTerm.toLowerCase().trim();
-            let baseData = examData;
-            
-            // Aplicar filtro de categoria primeiro
-            if (currentFilter !== 'todos') {
-                if (currentFilter === 'disponíveis') {
-                    baseData = examData.filter(exam => exam.status === 'Disponível');
-                } else if (currentFilter === 'especializados') {
-                    baseData = examData.filter(exam => exam.status === 'Especializado');
-                }
-            }
-            
-            // Aplicar busca
-            if (!term) {
-                filteredExams = [...baseData];
-            } else {
-                filteredExams = baseData.filter(exam => 
-                    exam.code.toLowerCase().includes(term) || 
-                    exam.description.toLowerCase().includes(term) ||
-                    exam.category.toLowerCase().includes(term)
-                );
-            }
-            
-            renderExams(filteredExams);
-            updateStats();
+            applyAllFilters();
         }
 
         function applyFilter(filter) {
             currentFilter = filter;
-            const searchTerm = document.getElementById('searchInput').value;
-            searchExams(searchTerm);
+            applyAllFilters();
         }
 
         // Funções de seleção
@@ -1286,6 +1596,124 @@
             // Função removida - não há mais sidebar
         }
 
+        // Dark Mode Functions
+        function toggleTheme() {
+            const body = document.body;
+            const isDarkMode = body.classList.toggle('dark-mode');
+
+            // Salvar preferência no localStorage
+            localStorage.setItem('darkMode', isDarkMode ? 'enabled' : 'disabled');
+
+            // Alternar ícones
+            const sunIcon = document.querySelector('.icon-sun');
+            const moonIcon = document.querySelector('.icon-moon');
+
+            if (isDarkMode) {
+                sunIcon.style.display = 'block';
+                moonIcon.style.display = 'none';
+            } else {
+                sunIcon.style.display = 'none';
+                moonIcon.style.display = 'block';
+            }
+        }
+
+        function initTheme() {
+            const darkMode = localStorage.getItem('darkMode');
+            const sunIcon = document.querySelector('.icon-sun');
+            const moonIcon = document.querySelector('.icon-moon');
+
+            if (darkMode === 'enabled') {
+                document.body.classList.add('dark-mode');
+                sunIcon.style.display = 'block';
+                moonIcon.style.display = 'none';
+            } else {
+                sunIcon.style.display = 'none';
+                moonIcon.style.display = 'block';
+            }
+        }
+
+        // Advanced Filters Functions
+        function toggleAdvancedFilters() {
+            const panel = document.getElementById('advancedFilters');
+            panel.classList.toggle('active');
+        }
+
+        function applyAdvancedFilters() {
+            advancedFiltersState.category = document.getElementById('categoryFilter').value;
+            advancedFiltersState.priceRange = document.getElementById('priceFilter').value;
+            advancedFiltersState.unit = document.getElementById('unitFilter').value;
+            advancedFiltersState.availability = document.getElementById('availabilityFilter').value;
+
+            applyAllFilters();
+        }
+
+        function clearAdvancedFilters() {
+            document.getElementById('categoryFilter').value = '';
+            document.getElementById('priceFilter').value = '';
+            document.getElementById('unitFilter').value = '';
+            document.getElementById('availabilityFilter').value = '';
+
+            advancedFiltersState = {
+                category: '',
+                priceRange: '',
+                unit: '',
+                availability: ''
+            };
+
+            applyAllFilters();
+        }
+
+        function applyAllFilters() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase().trim();
+            let baseData = [...examData];
+
+            // Filtro de status (todos/disponíveis/especializados)
+            if (currentFilter !== 'todos') {
+                if (currentFilter === 'disponíveis') {
+                    baseData = baseData.filter(exam => exam.status === 'Disponível');
+                } else if (currentFilter === 'especializados') {
+                    baseData = baseData.filter(exam => exam.status === 'Especializado');
+                }
+            }
+
+            // Filtro de categoria
+            if (advancedFiltersState.category) {
+                baseData = baseData.filter(exam => exam.category === advancedFiltersState.category);
+            }
+
+            // Filtro de preço
+            if (advancedFiltersState.priceRange) {
+                const [min, max] = advancedFiltersState.priceRange.split('-').map(Number);
+                baseData = baseData.filter(exam => {
+                    const price = parseFloat(exam.price.replace('R$ ', '').replace('.', '').replace(',', '.'));
+                    return price >= min && price <= max;
+                });
+            }
+
+            // Filtro de unidade
+            if (advancedFiltersState.unit) {
+                baseData = baseData.filter(exam => exam.unit === advancedFiltersState.unit);
+            }
+
+            // Filtro de disponibilidade
+            if (advancedFiltersState.availability) {
+                baseData = baseData.filter(exam => exam.availability === advancedFiltersState.availability);
+            }
+
+            // Busca por texto
+            if (searchTerm) {
+                baseData = baseData.filter(exam =>
+                    exam.code.toLowerCase().includes(searchTerm) ||
+                    exam.description.toLowerCase().includes(searchTerm) ||
+                    exam.category.toLowerCase().includes(searchTerm)
+                );
+            }
+
+            filteredExams = baseData;
+            renderExams(filteredExams);
+            updateStats();
+        }
+
         // Event listeners
         document.getElementById('searchInput').addEventListener('input', function(e) {
             searchExams(e.target.value);
@@ -1314,6 +1742,7 @@
 
         // Inicialização
         document.addEventListener('DOMContentLoaded', function() {
+            initTheme(); // Inicializar tema
             renderExams(examData);
             updateStats();
         });
