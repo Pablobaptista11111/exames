@@ -303,6 +303,313 @@
             border-color: #6d28d9;
         }
 
+        /* Modal Styles */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 9999;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(4px);
+        }
+
+        .modal-overlay.active {
+            display: flex;
+        }
+
+        .modal {
+            background: white;
+            border-radius: 16px;
+            padding: 0;
+            width: 90%;
+            max-width: 600px;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            animation: modalSlideIn 0.3s ease;
+        }
+
+        body.dark-mode .modal {
+            background: #1e293b;
+            color: #e2e8f0;
+        }
+
+        @keyframes modalSlideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .modal-header {
+            padding: 24px;
+            border-bottom: 1px solid #e2e8f0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        body.dark-mode .modal-header {
+            border-bottom-color: #334155;
+        }
+
+        .modal-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #0f172a;
+        }
+
+        body.dark-mode .modal-title {
+            color: #f1f5f9;
+        }
+
+        .modal-close {
+            width: 32px;
+            height: 32px;
+            border: none;
+            border-radius: 6px;
+            background: #f1f5f9;
+            color: #64748b;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.15s ease;
+        }
+
+        body.dark-mode .modal-close {
+            background: #334155;
+            color: #94a3b8;
+        }
+
+        .modal-close:hover {
+            background: #e2e8f0;
+            color: #334155;
+        }
+
+        body.dark-mode .modal-close:hover {
+            background: #475569;
+            color: #cbd5e1;
+        }
+
+        .modal-body {
+            padding: 24px;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+
+        .form-group-full {
+            grid-column: 1 / -1;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 13px;
+            font-weight: 500;
+            color: #475569;
+            margin-bottom: 6px;
+        }
+
+        body.dark-mode .form-label {
+            color: #cbd5e1;
+        }
+
+        .form-label.required::after {
+            content: " *";
+            color: #dc2626;
+        }
+
+        .form-input,
+        .form-select,
+        .form-textarea {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            background: white;
+            font-size: 14px;
+            color: #334155;
+            transition: all 0.15s ease;
+        }
+
+        body.dark-mode .form-input,
+        body.dark-mode .form-select,
+        body.dark-mode .form-textarea {
+            background: #0f172a;
+            border-color: #334155;
+            color: #cbd5e1;
+        }
+
+        .form-input:focus,
+        .form-select:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: #7c3aed;
+            box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
+        }
+
+        .form-textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        .modal-footer {
+            padding: 16px 24px;
+            border-top: 1px solid #e2e8f0;
+            display: flex;
+            gap: 12px;
+            justify-content: flex-end;
+        }
+
+        body.dark-mode .modal-footer {
+            border-top-color: #334155;
+        }
+
+        .btn-modal {
+            height: 40px;
+            padding: 0 20px;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            background: white;
+            color: #64748b;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.15s ease;
+        }
+
+        body.dark-mode .btn-modal {
+            background: #1e293b;
+            border-color: #334155;
+            color: #94a3b8;
+        }
+
+        .btn-modal:hover {
+            background: #f8fafc;
+            border-color: #cbd5e1;
+            color: #374151;
+        }
+
+        body.dark-mode .btn-modal:hover {
+            background: #334155;
+            border-color: #475569;
+            color: #cbd5e1;
+        }
+
+        .btn-modal.primary {
+            background: #7c3aed;
+            border-color: #7c3aed;
+            color: white;
+        }
+
+        .btn-modal.primary:hover {
+            background: #6d28d9;
+            border-color: #6d28d9;
+        }
+
+        .btn-modal:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        /* Page Header Styles */
+        .page-header {
+            margin-bottom: 32px;
+        }
+
+        .page-title-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 16px;
+        }
+
+        .page-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: #0f172a;
+        }
+
+        body.dark-mode .page-title {
+            color: #f1f5f9;
+        }
+
+        .header-actions-group {
+            display: flex;
+            gap: 8px;
+        }
+
+        .btn {
+            height: 36px;
+            padding: 0 16px;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            background: white;
+            color: #64748b;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.15s ease;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        body.dark-mode .btn {
+            background: #1e293b;
+            border-color: #334155;
+            color: #94a3b8;
+        }
+
+        .btn:hover {
+            background: #f8fafc;
+            border-color: #cbd5e1;
+            color: #374151;
+        }
+
+        body.dark-mode .btn:hover {
+            background: #334155;
+            border-color: #475569;
+            color: #cbd5e1;
+        }
+
+        .btn-primary {
+            background: #7c3aed;
+            border-color: #7c3aed;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #6d28d9;
+            border-color: #6d28d9;
+        }
+
+        .date-filter {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #64748b;
+            font-size: 14px;
+        }
+
+        body.dark-mode .date-filter {
+            color: #94a3b8;
+        }
+
         /* Stats Cards */
         .stats-grid {
             display: grid;
@@ -851,7 +1158,7 @@
                                     <polyline points="6,9 12,15 18,9"/>
                                 </svg>
                             </button>
-                            <button class="btn btn-primary">Novo exame</button>
+                            <button class="btn btn-primary" onclick="openNewExamModal()">Novo exame</button>
                         </div>
                     </div>
                     <div class="date-filter">
@@ -1104,9 +1411,92 @@
         </main>
     </div>
 
+    <!-- Modal Novo Exame -->
+    <div class="modal-overlay" id="newExamModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h2 class="modal-title">Novo Exame</h2>
+                <button class="modal-close" onclick="closeNewExamModal()">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <form id="newExamForm" onsubmit="saveNewExam(event)">
+                <div class="modal-body">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label class="form-label required">Código</label>
+                            <input type="text" id="examCode" class="form-input" placeholder="Ex: HEM001" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label required">Categoria</label>
+                            <select id="examCategory" class="form-select" required>
+                                <option value="">Selecione...</option>
+                                <option value="Bioquímica">Bioquímica</option>
+                                <option value="Hematologia">Hematologia</option>
+                                <option value="Hormonal">Hormonal</option>
+                                <option value="Imunologia">Imunologia</option>
+                                <option value="Microbiologia">Microbiologia</option>
+                                <option value="Genética">Genética</option>
+                                <option value="Toxicologia">Toxicologia</option>
+                                <option value="Biologia Molecular">Biologia Molecular</option>
+                                <option value="Urinálise">Urinálise</option>
+                            </select>
+                        </div>
+                        <div class="form-group form-group-full">
+                            <label class="form-label required">Descrição</label>
+                            <textarea id="examDescription" class="form-textarea" placeholder="Descrição completa do exame" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label required">Status</label>
+                            <select id="examStatus" class="form-select" required>
+                                <option value="">Selecione...</option>
+                                <option value="Disponível">Disponível</option>
+                                <option value="Especializado">Especializado</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label required">Preço</label>
+                            <input type="text" id="examPrice" class="form-input" placeholder="Ex: 50,00" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label required">Unidade</label>
+                            <select id="examUnit" class="form-select" required>
+                                <option value="">Selecione...</option>
+                                <option value="Todas">Todas</option>
+                                <option value="Centro">Centro</option>
+                                <option value="Recife">Recife</option>
+                                <option value="Boa Viagem">Boa Viagem</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label required">Disponibilidade</label>
+                            <select id="examAvailability" class="form-select" required>
+                                <option value="">Selecione...</option>
+                                <option value="Todas unidades">Todas unidades</option>
+                                <option value="Especializada">Especializada</option>
+                                <option value="Ocupacional">Ocupacional</option>
+                                <option value="Confidencial">Confidencial</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-modal" onclick="closeNewExamModal()">Cancelar</button>
+                    <button type="submit" class="btn-modal primary">Cadastrar Exame</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
     <script>
-        // Dados dos exames do PDF + Center Mais (Letra A)
-        const examData = [
+        // Carregar dados do localStorage ou usar dados padrão
+        let examData = [];
+
+        // Dados iniciais dos exames do PDF + Center Mais (Letra A)
+        const defaultExamData = [
             // Exames Center Mais - Letra A
             { code: "ABCD1", description: "ABCD1 - SEQUENCIAMENTO COMPLETO - NGS", category: "Genética", status: "Especializado", price: "R$ 1.200,00", unit: "Recife", availability: "Especializada" },
             { code: "AC-VGKC", description: "AC. CONTRA COMPLEXO DO CANAL DE POTÁSSIO-VGKC (LGI1,CASPR2)", category: "Imunologia", status: "Especializado", price: "R$ 450,00", unit: "Recife", availability: "Especializada" },
@@ -1189,7 +1579,31 @@
             { code: "TRAB", description: "ANTICORPO INIBIDOR DE TSH (TRAB)", category: "Hormonal", status: "Especializado", price: "R$ 95,00", unit: "Recife", availability: "Especializada" }
         ];
 
-        let filteredExams = [...examData];
+        // Inicializar dados do localStorage ou usar padrão
+        function initExamData() {
+            const savedData = localStorage.getItem('examData');
+            if (savedData) {
+                try {
+                    examData = JSON.parse(savedData);
+                } catch (e) {
+                    console.error('Erro ao carregar dados:', e);
+                    examData = [...defaultExamData];
+                }
+            } else {
+                examData = [...defaultExamData];
+            }
+        }
+
+        // Salvar dados no localStorage
+        function saveExamData() {
+            try {
+                localStorage.setItem('examData', JSON.stringify(examData));
+            } catch (e) {
+                console.error('Erro ao salvar dados:', e);
+            }
+        }
+
+        let filteredExams = [];
         let currentFilter = 'todos';
         let selectedExams = new Set(); // Para armazenar os códigos dos exames selecionados
         let advancedFiltersState = {
@@ -1596,6 +2010,100 @@
             // Função removida - não há mais sidebar
         }
 
+        // Modal Functions
+        function openNewExamModal() {
+            document.getElementById('newExamModal').classList.add('active');
+            document.getElementById('newExamForm').reset();
+        }
+
+        function closeNewExamModal() {
+            document.getElementById('newExamModal').classList.remove('active');
+        }
+
+        // Fechar modal ao clicar fora dele
+        document.addEventListener('click', function(e) {
+            const modal = document.getElementById('newExamModal');
+            if (e.target === modal) {
+                closeNewExamModal();
+            }
+        });
+
+        // Formatar preço
+        function formatPrice(value) {
+            // Remove tudo exceto números e vírgula
+            let price = value.replace(/[^\d,]/g, '');
+
+            // Garante que tem apenas uma vírgula
+            const parts = price.split(',');
+            if (parts.length > 2) {
+                price = parts[0] + ',' + parts.slice(1).join('');
+            }
+
+            return price;
+        }
+
+        // Adicionar formatação automática ao campo de preço
+        document.addEventListener('DOMContentLoaded', function() {
+            const priceInput = document.getElementById('examPrice');
+            if (priceInput) {
+                priceInput.addEventListener('input', function(e) {
+                    e.target.value = formatPrice(e.target.value);
+                });
+            }
+        });
+
+        // Salvar novo exame
+        function saveNewExam(event) {
+            event.preventDefault();
+
+            const code = document.getElementById('examCode').value.trim().toUpperCase();
+            const description = document.getElementById('examDescription').value.trim();
+            const category = document.getElementById('examCategory').value;
+            const status = document.getElementById('examStatus').value;
+            let price = document.getElementById('examPrice').value.trim();
+            const unit = document.getElementById('examUnit').value;
+            const availability = document.getElementById('examAvailability').value;
+
+            // Validar se código já existe
+            if (examData.some(exam => exam.code === code)) {
+                alert('Erro: Já existe um exame com este código!');
+                return;
+            }
+
+            // Formatar preço
+            if (!price.startsWith('R$ ')) {
+                price = 'R$ ' + price;
+            }
+
+            // Criar novo exame
+            const newExam = {
+                code: code,
+                description: description,
+                category: category,
+                status: status,
+                price: price,
+                unit: unit,
+                availability: availability
+            };
+
+            // Adicionar ao array
+            examData.push(newExam);
+
+            // Salvar no localStorage
+            saveExamData();
+
+            // Atualizar interface
+            filteredExams = [...examData];
+            renderExams(filteredExams);
+            updateStats();
+
+            // Fechar modal e resetar formulário
+            closeNewExamModal();
+
+            // Mostrar mensagem de sucesso
+            alert('Exame cadastrado com sucesso!\n\nCódigo: ' + code + '\nDescrição: ' + description);
+        }
+
         // Dark Mode Functions
         function toggleTheme() {
             const body = document.body;
@@ -1742,7 +2250,9 @@
 
         // Inicialização
         document.addEventListener('DOMContentLoaded', function() {
+            initExamData(); // Carregar dados do localStorage
             initTheme(); // Inicializar tema
+            filteredExams = [...examData];
             renderExams(examData);
             updateStats();
         });
